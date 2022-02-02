@@ -1,5 +1,6 @@
 import React from 'react';
 import {ChatEnterMessage} from './components/ChatEnterMessage'
+import {MessageSend} from "./components/MessageSend";
 import './App.css'
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
                <div className="ekraanTaust">
                </div>
                <ChatEnterMessage/>
+               <MessageSend/>
           </div>
 
     );

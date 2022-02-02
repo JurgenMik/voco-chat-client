@@ -1,0 +1,23 @@
+.row{
+    width: 79%;
+}
+
+.nupp{
+
+    margin: 0;
+}
+
+.saada{
+
+    float: right;
+    border: 2px solid #FFFFFF;
+    background-color: transparent;
+    border-radius: 6px;
+    color: white;
+    font-family: Arial;
+    font-size: 13px;
+    width: 8%;
+    margin-top: 10px;
+    padding: 5px;
+
+}
