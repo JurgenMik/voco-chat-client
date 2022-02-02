@@ -16,32 +16,13 @@ body{
 
 .ekraanTaust{
     background-color: #1D2028 ;
-    width: 52%;
+    width: 58%;
     height: 475px;
     border-radius: 12px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.nupp{
 
-    justify-content: center;
-    display: flex;
-    margin: 0;
-
-}
-
-.saada{
-    border: 2px solid #FFFFFF;
-    background-color: transparent;
-    border-radius: 6px;
-    color: white;
-    font-family: Arial;
-    font-size: 13px;
-    width: 8%;
-    margin-top: 20px;
-    padding: 5px;
-
-}
 
 

@@ -1,9 +1,5 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import {Col} from "react-bootstrap";
-import Row from 'react-bootstrap/Row';
-
-
+import {ChatEnterMessage} from './components/ChatEnterMessage'
 import './App.css'
 
 function App() {
@@ -12,15 +8,7 @@ function App() {
                <h2> KHK </h2>
                <div className="ekraanTaust">
                </div>
-               <Container fluid>
-                   <Row>
-                      <Col className="col-sm-4">
-                          <div className="nupp">
-                              <button type="button" className="saada"> Send </button>
-                          </div>
-                      </Col>
-                   </Row>
-               </Container>
+               <ChatEnterMessage/>
           </div>
 
     );
