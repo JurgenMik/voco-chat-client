@@ -1,0 +1,30 @@
+
+.kuvaSonum{
+
+    background-color: #444548;
+    width: 86%;
+    height: 55px;
+    border-radius: 12px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    padding-left: 18px;
+    position: relative;
+
+}
+
+.sonum{
+
+    color: white;
+    font-size: 14px;
+    width: 86%;
+
+}
+
+.date{
+
+    color: grey;
+    font-size: 11px;
+    margin-top: -14px;
+
+}
