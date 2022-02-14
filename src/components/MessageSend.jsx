@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Button from 'react-bootstrap/Button'
 import './MessageSend.css';
 
 export class MessageSend extends Component{
@@ -8,7 +9,7 @@ export class MessageSend extends Component{
             <div className="container">
                 <div className="row">
                   <div className="nupp">
-                    <button type="button" className="saada"> Send </button>
+                    <Button type="submit" className="saada"> Send </Button>
                  </div>
                </div>
             </div>

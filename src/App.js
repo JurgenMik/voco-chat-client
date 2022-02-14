@@ -15,12 +15,15 @@ function App() {
                    <Chatmessages/>
                    <Chatmessages/>
                    <Chatmessages/>
-               </div>
-               <ChatEnterMessage/>
-               <MessageSend/>
-          </div>
 
-    );
+               </div>
+                <ChatEnterMessage/>
+               <div>
+                   <MessageSend/>
+               </div>
+           </div>
+
+     );
 }
 
 
