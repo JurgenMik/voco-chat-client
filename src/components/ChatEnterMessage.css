@@ -1,10 +1,10 @@
 .typeBox{
     margin-left: auto;
     margin-right: auto;
-    width: 52%;
+    width: 54%;
     height: 63px;
     background-color: white;
-    margin-top: -30px;
+    margin-top: -12px;
     border-radius: 0px 0px 12px 12px;
     color: black;
 }
@@ -19,6 +19,10 @@
     height: 64px;
 }
 
+/*
+
+ */
+
 .sisestaNimi{
 
     border: none;
@@ -28,7 +32,7 @@
     margin-top: 20px;
     font-weight: bold;
     padding: 3px;
-    font-size: 16px;
+    font-size: 15px;
 
 }
 
@@ -36,11 +40,11 @@
     width: 80%;
 }
 
-.sisestaSonum{
+#sisestaSonum{
     padding-bottom: 35px;
     width: 90%;
     margin-left: 8px;
-    font-size: 13px;
+    font-size: 14px;
     border: none;
 }
 
@@ -51,4 +55,69 @@
     padding-top: 26px;
     width: 5%;
 }
+
+/*
+  message cards
+ */
+
+.kuvaSonum{
+
+    background-color: #444548;
+    width: 89%;
+    height: 58px;
+    border-radius: 12px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 13px;
+    padding-left: 18px;
+    position: relative;
+
+}
+
+.sonum{
+
+    color: white;
+    font-size: 14px;
+    width: 86%;
+
+}
+
+.date{
+
+    color: grey;
+    font-size: 11px;
+    margin-top: -14px;
+
+}
+
+
+/*
+  nupp
+ */
+
+.row{
+    width: 77%;
+}
+
+.nupp{
+
+    margin: 0;
+}
+
+.saada{
+
+    float: right;
+    border: 2px solid #FFFFFF;
+    background-color: transparent;
+    border-radius: 6px;
+    color: white;
+    font-family: Arial;
+    font-size: 13px;
+    width: 8%;
+    margin-top: 13px;
+    padding: 5px;
+
+}
+
+
 

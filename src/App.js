@@ -1,30 +1,13 @@
 import React from 'react';
-import {ChatEnterMessage} from './components/ChatEnterMessage'
-import {MessageSend} from "./components/MessageSend";
-import {Chatmessages} from "./components/chatmessages";
+import ChatEnterMessage from './components/ChatEnterMessage'
+
 import './App.css'
 
 function App() {
+
     return (
-           <div>
-               <h2> KHK </h2>
-               <div className="ekraanTaust">
-                   <br></br>
-                   <Chatmessages/>
-                   <Chatmessages/>
-                   <Chatmessages/>
-                   <Chatmessages/>
-                   <Chatmessages/>
-
-               </div>
-                <ChatEnterMessage/>
-               <div>
-                   <MessageSend/>
-               </div>
-           </div>
-
+           <ChatEnterMessage/>
      );
 }
-
 
 export default App;
