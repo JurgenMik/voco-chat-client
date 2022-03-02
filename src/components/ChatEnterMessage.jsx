@@ -1,5 +1,5 @@
 import './ChatEnterMessage.css';
-import React, { useState} from "react";
+import React, { useState, useEffect } from "react";
 import Axios from 'axios';
 import Button from "react-bootstrap/Button";
 
@@ -8,18 +8,25 @@ import Button from "react-bootstrap/Button";
 
       const [user, setUser] = useState('')
       const [sonum, setSonum] = useState('')
-      const [koostaKaart , setKoosta]= useState([]);
+      const [kuva, setKuva] = useState([]);
+
+      useEffect(()=>{ // called on page ref
+
+              Axios.get('http://localhost:3001/read').then((response) => {
+                  setKuva(response.data); // reading data from backend via get
+              })
+
+      }, [])
 
       function CreateMessageCard() {
 
-          if (setSonum.length > 100)  { // || setUser.value = '' || setSonum.value = ''
+          if (setSonum.length > 100)  { // || setUser.value = '' || setSonum.value = '' validation
 
-              alert('error') // create <div> with warning
+              alert('error') // voiks luua <div> tagasiside </div>
 
           } else {
 
-              setKoosta(koostaKaart.concat({sonum})) // state updated by .concat creating new array with passed obj
-              Axios.post("http://localhost:3001/insert", { // making a http request
+              Axios.post("http://localhost:3001/insert", { // making a http request , sends an array of data{obj} to backend via post
 
                  sonum: sonum,
                  user: user,
@@ -28,7 +35,6 @@ import Button from "react-bootstrap/Button";
           }
 
           document.getElementById('sisestaSonum').value = ''; // ux - taastab sisendi valja
-          setKoosta(koostaKaart.concat({sonum})) // state updated by .concat creating new array with passed obj
 
        }
        //getElementsByClassName
@@ -38,11 +44,11 @@ import Button from "react-bootstrap/Button";
                    <div className="ekraanTaust">
                        <br>
                        </br>
-                       {koostaKaart.map((sonum) => { // .map - loopib labi array ja returnib ele sisestatud jarjekorras
+                       {kuva.map((val, key) => { // .map - loopib labi backend data.array ja returnib/kuvab sonumid maaratud value:key paaridele
                            return(
-                           <div className="kuvaSonum" key={sonum}>
-                               <p className="sonum" > {sonum.sonum} </p>
-                               <p className="date" >  {user} - 12.01.2022 15:33 </p>
+                           <div className="kuvaSonum" key={key}>
+                               <p className="sonum" > {val.messageSisu} </p>
+                               <p className="date" >  {val.kasutaja} - 12.01.2022 15:33 </p>
                            </div>
                            )
                          })}
