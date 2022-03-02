@@ -1,5 +1,6 @@
 import './ChatEnterMessage.css';
 import React, { useState} from "react";
+import Axios from 'axios';
 import Button from "react-bootstrap/Button";
 
 
@@ -13,14 +14,22 @@ import Button from "react-bootstrap/Button";
 
           if (setSonum.length > 100)  { // || setUser.value = '' || setSonum.value = ''
 
-              alert('error')
+              alert('error') // create <div> with warning
 
           } else {
 
               setKoosta(koostaKaart.concat({sonum})) // state updated by .concat creating new array with passed obj
+              Axios.post("http://localhost:3001/insert", { // making a http request
+
+                 sonum: sonum,
+                 user: user,
+
+             });
           }
 
           document.getElementById('sisestaSonum').value = ''; // ux - taastab sisendi valja
+          setKoosta(koostaKaart.concat({sonum})) // state updated by .concat creating new array with passed obj
+
        }
        //getElementsByClassName
         return (
